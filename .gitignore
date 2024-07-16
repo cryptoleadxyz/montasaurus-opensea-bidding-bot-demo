@@ -185,3 +185,6 @@ node_modules
 .nyc_output
 yarn-error.log
 doc.txt
+.github/
+.vscode/
+
