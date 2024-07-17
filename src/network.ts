@@ -24,21 +24,19 @@ const networks = {
     itemTokenIdentifier: getEnvRequired("MAINNET_ITEM_TOKEN_IDENTIFIER"),
   },
   testnets: {
-    chainId: 5,
-    chainName: "goerli",
-    baseURL: "https://testnets-api.opensea.io/api/",
-    wethAddress: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+    chainId: 11155111,
+    chainName: "sepolia",
+    baseURL: "https://testnets-api.opensea.io/api/", // [] need to double-check
+    wethAddress: "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9", // this is the weth that can be used to make offers on opensea sepolia
     apiKey: undefined,
-    rpcUrl:
-      process.env.TESTNETS_RPC_URL ||
-      "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-    network: Chain.Goerli,
+    rpcUrl: process.env.TESTNETS_RPC_URL,
+    network: Chain.Sepolia,
     collectionSlug:
-      process.env.TESTNETS_COLLECTION_SLUG || "boredapeyachtclub-ehs3xmkzrw",
+      process.env.TESTNETS_COLLECTION_SLUG || "boredapeyachtclubsepolia",
     itemAssetContractAddress:
       process.env.TESTNETS_ITEM_ASSET_CONTRACT_ADDRESS ||
-      "0xd0a21d074efc3393853accd481160a070a20cf32",
-    itemTokenIdentifier: process.env.TESTNETS_ITEM_TOKEN_IDENTIFIER || "143",
+      "0xE29F8038d1A3445Ab22AD1373c65eC0a6E1161a4",
+    itemTokenIdentifier: process.env.TESTNETS_ITEM_TOKEN_IDENTIFIER || "166",
   },
 }
 
