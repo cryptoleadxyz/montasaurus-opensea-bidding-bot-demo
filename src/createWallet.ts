@@ -4,6 +4,7 @@ import { Wallet } from "ethers"
 const id = crypto.randomBytes(32).toString("hex")
 const privateKey = "0x" + id
 console.log("SAVE BUT DO NOT SHARE THIS:", privateKey)
+console.log("")
 
 const wallet = new Wallet(privateKey)
 console.log("Address: " + wallet.address)
